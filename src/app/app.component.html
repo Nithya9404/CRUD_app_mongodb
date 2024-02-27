@@ -1,0 +1,52 @@
+<!-- app.component.html or any parent component -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Welcome</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Add Bootstrap CDN link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container p-5">
+    <h2>Employee Details</h2> <!-- Added heading -->
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">City</th>
+          <th scope="col">Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employee">
+          <td>{{ employee.Emp_id }}</td>
+          <td>{{ employee.Emp_name }}</td>
+          <td>{{ employee.Emp_city }}</td>
+          <td>{{ employee.Emp_salary }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="buttons">
+      <button mat-button routerLink="create-user">Create</button>
+      <button mat-button routerLink="update-user">Update</button>
+    </div>
+    
+    <!-- Add the router-outlet here -->
+    <router-outlet></router-outlet>
+    
+  </div>
+  
+  <!-- Add Bootstrap JS and Popper.js if needed -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

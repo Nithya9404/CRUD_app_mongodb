@@ -1,0 +1,21 @@
+<!-- create-user.component.html -->
+
+<div class="container p-5">
+    <h2>Create User</h2>
+    
+    <form (ngSubmit)="createUser()" #userForm="ngForm">
+    <label for="id">Id:</label>
+    <input type="text" id="id" name="id" [(ngModel)]="newUser.Emp_id" required>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newUser.Emp_name" required>
+  
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" [(ngModel)]="newUser.Emp_city" required>
+  
+      <label for="salary">Salary:</label>
+      <input type="text" id="salary" name="salary" [(ngModel)]="newUser.Emp_salary" required>
+  
+      <button type="submit">Create User</button>
+    </form>
+  </div>
+  
